@@ -11,7 +11,7 @@ const RootNavigation = createAppContainer(createSwitchNavigator({
   Home,
   Game,
   End
-}, { initialRouteName: 'Home'}));
+}, { initialRouteName: 'Game'}));
 
 export default function App() {
   return (

@@ -19,9 +19,9 @@ export default End = (props) => {
 
     return (
         <View style={styles.container}>
-            <Text>THANK YOU</Text>
+            <Text style={{ color: 'white', fontWeight: 'bold', marginBottom: 50 }}>THANK YOU FOR PLAYING</Text>
             <TouchableOpacity onPress={handlePlayAgain}>
-                <Text style={{ backgroundColor: 'blue', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>PLAY AGAIN</Text>
+                <Text style={{ backgroundColor: 'black', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>PLAY AGAIN</Text>
             </TouchableOpacity>
         </View>
     )
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#f2941d'
     }
 });

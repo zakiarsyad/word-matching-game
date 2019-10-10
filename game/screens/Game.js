@@ -3,11 +3,13 @@ import {
     Text,
     View,
     StyleSheet,
-    TouchableOpacity
+    TouchableOpacity,
+    Image
 } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 
 import { generateBoard, setOpenedCard, setFoundCard, closeCard } from '../store/actions'
+import hacktivLogo from '../assets/hacktiv.png'
 
 export default Game = (props) => {
     const dispatch = useDispatch()
@@ -37,15 +39,18 @@ export default Game = (props) => {
 
     return (
         <View style={styles.container}>
-            <Text>GAME</Text>
+            <Text style={{ color: 'white', fontWeight: 'bold', marginBottom: 50 }}>GAME</Text>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
                 {board.map((square, i) => {
                     return (
                         <View
                             key={i}
-                            style={{ borderWidth: 1, flexBasis: '30%', height: 100, width: '100%' }}>
+                            style={{ borderWidth: 1, borderColor: 'white', flexBasis: '30%', height: 100, width: '100%' }}>
                             {(i == 4) && 
                                 <View style={{ backgroundColor: 'black', width: '100%', height: '100%' }}>
+                                <Image
+                                    style={{ resizeMode: 'stretch', width: '100%', height: '100%' }}
+                                    source={hacktivLogo} />
                                 </View>
                             }
                             {openedCard[0] && i == openedCard[0][0] && 
@@ -89,6 +94,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#f2941d'
     }
 });

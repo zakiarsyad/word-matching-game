@@ -13,9 +13,9 @@ export default Home = (props) => {
 
     return (
         <View style={styles.container}>
-            <Text>HOME</Text>
+            <Text style={{ color: 'white', fontWeight: 'bold', marginBottom: 50 }}>WORD MATCHING GAME</Text>
             <TouchableOpacity onPress={hanldeStart}>
-                <Text style={{ backgroundColor: 'blue', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>START GAME</Text>
+                <Text style={{ backgroundColor: 'black', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>START GAME</Text>
             </TouchableOpacity>
         </View>
     )
@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        backgroundColor: '#f2941d'
     }
 });
