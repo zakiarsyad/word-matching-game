@@ -8,7 +8,7 @@ import {
 } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { generateBoard, setOpenedCard, setFoundCard, closeCard } from '../store/actions'
+import { generateBoard, setOpenedCard, setFoundCard, closeCard, clearGame } from '../store/actions'
 import hacktivLogo from '../assets/hacktiv.png'
 
 export default Game = (props) => {
@@ -39,6 +39,11 @@ export default Game = (props) => {
 
     const hanldePress = val => {
         dispatch(setOpenedCard(val))
+    }
+
+    const handleRestart = () => {
+        props.navigation.navigate('Home')
+        dispatch(clearGame())
     }
 
     return (
@@ -90,6 +95,9 @@ export default Game = (props) => {
                     )
                 })}
             </View>
+            <TouchableOpacity onPress={ handleRestart } style={{ marginTop: 20 }}>
+                <Text style={{ backgroundColor: 'black', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>RESTART</Text>
+            </TouchableOpacity>
         </View>
     )
 }
