@@ -15,7 +15,7 @@ export default Home = (props) => {
         <View style={styles.container}>
             <Text style={{ color: 'white', fontWeight: 'bold', marginBottom: 50 }}>WORD MATCHING GAME</Text>
             <TouchableOpacity onPress={hanldeStart}>
-                <Text style={{ backgroundColor: 'black', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>START GAME</Text>
+                <Text style={{ backgroundColor: 'black', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>START</Text>
             </TouchableOpacity>
         </View>
     )
