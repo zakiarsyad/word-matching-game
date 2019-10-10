@@ -30,7 +30,11 @@ export default Game = (props) => {
                 dispatch(closeCard())
             }
         }
-        if (foundCard.length == 8) props.navigation.navigate('End')
+        if (foundCard.length == 8) {
+            setTimeout(() => {
+                props.navigation.navigate('End')
+            }, 1000)
+        }
     }, [openedCard, foundCard])
 
     const hanldePress = val => {
@@ -39,7 +43,7 @@ export default Game = (props) => {
 
     return (
         <View style={styles.container}>
-            <Text style={{ color: 'white', fontWeight: 'bold', marginBottom: 50 }}>GAME</Text>
+            <Text style={{ color: 'white', marginBottom: 50 }}>Tap and find the same word</Text>
             <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center' }}>
                 {board.map((square, i) => {
                     return (
@@ -56,13 +60,13 @@ export default Game = (props) => {
                             {openedCard[0] && i == openedCard[0][0] && 
                                 <View
                                     style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text>{square}</Text>
+                                    <Text style={{ color: 'white', fontWeight: 'bold' }}>{square}</Text>
                                 </View>
                             }
                             {openedCard[1] && i == openedCard[1][0] &&
                                 <View
                                     style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-                                    <Text>{square}</Text>
+                                    <Text style={{ color: 'white', fontWeight: 'bold' }}>{square}</Text>
                                 </View>
                             }
                             {foundCard &&
@@ -71,7 +75,7 @@ export default Game = (props) => {
                                         <View
                                             key={index}
                                             style={{ width: '100%', height: '100%', justifyContent: 'center', alignItems: 'center' }}>
-                                            <Text>{square}</Text>
+                                            <Text style={{ color: 'white', fontWeight: 'bold' }}>{square}</Text>
                                         </View>
                                     )
                                 })

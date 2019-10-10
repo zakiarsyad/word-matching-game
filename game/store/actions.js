@@ -1,7 +1,7 @@
 import store from '.'
 
 export const generateBoard = () => {
-    let board = ['A', 'A', 'B', 'B', 'C', 'C', 'D', 'D']
+    let board = ['javascript', 'javascript', 'react', 'react', 'vue.js', 'vue.js', 'mongoDB', 'mongoDB']
 
     let currentIndex = board.length
 

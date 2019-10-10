@@ -19,7 +19,8 @@ export default End = (props) => {
 
     return (
         <View style={styles.container}>
-            <Text style={{ color: 'white', fontWeight: 'bold', marginBottom: 50 }}>THANK YOU FOR PLAYING</Text>
+            <Text style={{ color: 'white', fontWeight: 'bold' }}>Congratulation !</Text>
+            <Text style={{ color: 'white', marginBottom: 50 }}>You have completed this game </Text>
             <TouchableOpacity onPress={handlePlayAgain}>
                 <Text style={{ backgroundColor: 'black', borderRadius: 20, paddingHorizontal: 20, paddingVertical: 5, color: 'white' }}>PLAY AGAIN</Text>
             </TouchableOpacity>
