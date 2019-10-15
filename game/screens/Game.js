@@ -27,7 +27,9 @@ export default Game = (props) => {
                 dispatch(setFoundCard(openedCard[0][0], openedCard[1][0]))
                 dispatch(closeCard())
             } else {
-                dispatch(closeCard())
+                setTimeout(() => {
+                    dispatch(closeCard())
+                }, 200)
             }
         }
         if (foundCard.length == 8) {
